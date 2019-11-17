@@ -1,5 +1,5 @@
 <?php
-class M_spbu extends CI_Model{
+class spbu_model extends CI_Model{
 
 	function edit_data($where,$table){
 		return $this->db->get_where($table,$where);
