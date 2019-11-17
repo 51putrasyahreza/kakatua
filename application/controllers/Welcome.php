@@ -21,12 +21,13 @@ class Welcome extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_spbu');
+		$this->load->model('spbu_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('login/login');
+		
 	}
 
 	function login(){
@@ -54,7 +55,7 @@ class Welcome extends CI_Controller {
 				redirect(base_url().'welcome?pesan=gagal');
 			}
 		}else{
-			$this->load->view('login');
+			$this->load->view('login/login');
 		}
 	}
 }
